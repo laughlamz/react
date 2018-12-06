@@ -9,7 +9,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <TodoItem />
+          <TodoItem tittle="Đi chơi" />
+          <TodoItem tittle="Đi dạo" />
+          <TodoItem tittle="Đi ăn" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
