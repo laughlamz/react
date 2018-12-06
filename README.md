@@ -42,3 +42,13 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+### `Following this step`
+
+1. create-react-app
+  - fix error: can't npm start on VSC (permission denied, access '/usr/local/lib/node_modules')
+  https://stackoverflow.com/questions/33725639/npm-install-g-less-does-not-work, 3rd answer
+  - install npx and nvm (n) for create react app and node version management
+
+2. create-react-component
