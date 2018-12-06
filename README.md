@@ -52,3 +52,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
   - install npx and nvm (n) for create react app and node version management
 
 2. create-react-component
+
+3. props
+  - Pass a content: <TodoItem title="abc" option={obj}/>
+  - TodoItem component: {this.props.tittle} or pass a object
