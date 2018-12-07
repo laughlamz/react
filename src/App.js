@@ -16,12 +16,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <img src={logo} className="App-logo" alt="logo" />
-          {
-            this.todoItem.map((item, index) => 
-            <TodoItem key={index} item={item} />
-            )
-          }
+          {this.todoItem.length > 0 && this.todoItem.map((item, index) => 
+            (<TodoItem key={index} item={item} />)
+          )}
+          {this.todoItem.length === 0 && 'Nothing here'}
       </div>
     );
   }
