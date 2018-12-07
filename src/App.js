@@ -4,26 +4,16 @@ import './App.css';
 import TodoItem from './components/TodoItem';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.todoItem = ['Mua bim bim', 'Di da bong', 'Di do xang'];
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <TodoItem tittle="Đi chơi" />
-          <TodoItem tittle="Đi dạo" />
-          <TodoItem tittle="Đi ăn" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+          {this.todoItem.map((item, index) => <TodoItem key={index} tittle={item} />)}
       </div>
     );
   }
