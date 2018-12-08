@@ -56,3 +56,13 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 3. props
   - Pass a content: <TodoItem title="abc" option={obj}/>
   - TodoItem component: {this.props.tittle} or pass a object
+  
+4. Finish simple app 
+  - If function pass to a component
+    
+    use bind 
+  - If function pass to a component with an variable
+    
+    Don't need to use bind
+    
+    But in that function: function(a) { return(event) { a...somecode  } } .. to detect when click & prevent 1st run
