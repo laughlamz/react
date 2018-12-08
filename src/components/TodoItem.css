@@ -3,9 +3,27 @@
     font-weight: 300;
     font-size: 24px;
     color: #4d4d4d;
+    width: 500px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    text-align: left;
+    border: 1px solid #EEE;
 }
 
-.TodoItem-complete {
+.TodoItem p {
+    margin-left: 20px;
+}
+
+.TodoItem-complete p {
     text-decoration: line-through;
     opacity: .3;
+}
+
+
+
+.checkImg {
+    width: 30px;
+    height: 60px;
+    margin-left: 20px;
 }
