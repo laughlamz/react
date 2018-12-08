@@ -19,15 +19,23 @@ class App extends Component {
     this.onItemClicked = this.onItemClicked.bind(this);
   }
 
-  onItemClicked() {
-    // console.log(item);
-    this.setState({
-      todoItem: [
-        { tittle: 'Mua bim bim', isComplete: true}, 
-        { tittle: 'Di da bong', isComplete: true}, 
-        { tittle: 'Di do xang', isComplete: true}
-      ]
-    });
+  onItemClicked(item) {
+    return (event) => {
+      // console.log(item);
+      const isComplete = item.isComplete;
+      const { todoItem } = this.state;
+      const index = todoItem.indexOf(item);
+      this.setState({
+        todoItem: [
+          ...todoItem.slice(0, index),
+          {
+            ...item,
+            isComplete: !isComplete
+          },
+          ...todoItem.slice(index + 1)
+        ]
+      });
+    };
   }
 
   render() {
@@ -37,7 +45,7 @@ class App extends Component {
     return (
       <div className="App">
           {todoItem.length > 0 && todoItem.map((item, index) => 
-            (<TodoItem key={index} item={item} onClick={this.onItemClicked}/>)
+            (<TodoItem key={index} item={item} onClick={this.onItemClicked(item)}/>)
           )}
           {todoItem.length === 0 && 'Nothing here'}
       </div>
