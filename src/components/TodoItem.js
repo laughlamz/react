@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
 import './TodoItem.css';
 
 class TodoItem extends Component {
@@ -8,7 +9,7 @@ class TodoItem extends Component {
         if (item.isComplete)
             className += ' TodoItem-complete';
         return (
-            <div className={className}>
+            <div className={classNames('TodoItem', {'TodoItem-complete': item.isComplete === true})}>
                 <p>{this.props.item.tittle}</p>
             </div>
         );

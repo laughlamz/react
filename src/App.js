@@ -8,7 +8,7 @@ class App extends Component {
     super();
     this.todoItem = [
       { tittle: 'Mua bim bim', isComplete: true}, 
-      { tittle: 'Di da bong', isComplete: true}, 
+      { tittle: 'Di da bong', isComplete: false}, 
       { tittle: 'Di do xang', isComplete: false}
     ];
   }
