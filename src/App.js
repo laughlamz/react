@@ -14,7 +14,7 @@ class App extends Component {
       todoItem: [
         { tittle: 'Mua bim bim', isComplete: true}, 
         { tittle: 'Di da bong', isComplete: false}, 
-        { tittle: 'Di do xang', isComplete: false}
+        { tittle: 'Di do xang', isComplete: 5}
       ]
     };
 
@@ -44,7 +44,7 @@ class App extends Component {
 
   onKeyUp(event) {
     // console.log(event.target.value);
-    if(event.keyCode == 13) {
+    if(event.keyCode === 13) {
       let text = event.target.value;
       if(!text)
         return;
