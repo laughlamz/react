@@ -6,10 +6,12 @@ class TodoItem extends Component {
         super(props);
         this.inputElement = React.createRef();
 
-        setTimeout(() => this.inputElement.current.focus(), 2000);
+        // setTimeout(() => this.inputElement.current.focus(), 2000);
+    }
 
-        // this can't run, error, cause we have to wait virtual DOM -> truely DOM
-        // this.inputElement.current.focus()        
+    // With this will ok, cause it wait for Truely DOM render ready
+    componentDidMount() {
+        this.inputElement.current.focus();
     }
 
     render() {
